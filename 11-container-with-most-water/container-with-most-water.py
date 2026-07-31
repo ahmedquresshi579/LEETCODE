@@ -7,13 +7,13 @@ class Solution:
 
         while l<r:
             small = min(height[l],height[r])
-            dis = abs(l-r)
+            dis = r-l
             area = small * dis
 
             if area > max_area:
                 max_area = area
 
-            if small == height[l]:
+            if height[l] < height[r]:
                 l = l + 1
             else:
                 r = r - 1
